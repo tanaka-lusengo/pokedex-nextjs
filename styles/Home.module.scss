@@ -1,0 +1,36 @@
+@use "./partials/variables" as *;
+
+.main {
+  .title {
+    color: #333;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .text {
+    color: #777;
+    text-align: center;
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pokeImage {
+    margin: 2.5rem;
+    height: 15rem;
+    width: auto;
+  }
+
+  .btn {
+    display: block;
+    width: 15rem;
+    padding: 0.8rem 0;
+    margin: 5rem auto;
+    background: $primary-color;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+  }
+}
