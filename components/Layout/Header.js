@@ -1,18 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
-import styles from "../../styles/navigation/Header.module.scss";
+import styles from "../../styles/components/Header.module.scss";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.logoContainer}>
-        <h1>PokéDex</h1>
-        <img
-          className={styles.logoImage}
-          src="/images/pokedex.png"
-          alt="a red pokémon ball"
-        />
-      </div>
+      <Link href="/">
+        <div className={styles.logoContainer}>
+          <h1>Tan's PokéDex</h1>
+          <img
+            className={styles.logoImage}
+            src="/images/pokedex.png"
+            alt="a red pokémon ball"
+          />
+        </div>
+      </Link>
       <nav>
         <ul className={styles.list}>
           <Link href="/">

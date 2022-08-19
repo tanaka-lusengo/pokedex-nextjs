@@ -1,5 +1,5 @@
 .header {
-  margin: 1rem auto 8rem;
+  margin: 1rem auto 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +8,7 @@
   .logoContainer {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .logoImage {
