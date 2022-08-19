@@ -1,4 +1,22 @@
-@use "./partials/variables" as *;
+@use "../partials/variables" as *;
+
+@keyframes shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
 
 .main {
   .title {
@@ -21,6 +39,7 @@
     margin: 2.5rem;
     height: 15rem;
     width: auto;
+    animation: shaking 3s infinite;
   }
 
   .btn {
