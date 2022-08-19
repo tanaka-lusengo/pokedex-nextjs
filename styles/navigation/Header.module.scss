@@ -1,0 +1,27 @@
+.header {
+  margin: 1rem auto 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoImage {
+    margin-left: 1rem;
+    height: auto;
+    width: 4.5rem;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+  }
+
+  .listItemContainer {
+    padding: 0 2rem;
+  }
+}
