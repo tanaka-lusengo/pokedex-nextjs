@@ -6,10 +6,14 @@ import { useRouter } from "next/router";
 const NotFound = () => {
   const router = useRouter();
 
-  useEffect(() => {
+  const reRouteHome = () => {
     setTimeout(() => {
       router.push("/");
     }, 3000);
+  };
+
+  useEffect(() => {
+    reRouteHome();
   });
 
   return (
@@ -21,6 +25,11 @@ const NotFound = () => {
       <div className="not-found">
         <h1>Oooops...</h1>
         <h2>This page cannot be found</h2>
+        <img
+          className="not-found__image"
+          src="/images/pikachu.svg"
+          alt="pokemon pikachu"
+        />
         <p>
           Go back to{" "}
           <Link href="/">
