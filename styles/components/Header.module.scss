@@ -23,4 +23,12 @@
   .listItemContainer {
     padding: 0 2rem;
   }
+
+  .link {
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: $pokemon-red;
+    }
+  }
 }
