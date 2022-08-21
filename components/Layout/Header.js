@@ -6,7 +6,7 @@ const Header = () => {
     <header className={styles.header}>
       <Link href="/">
         <div className={styles.logoContainer}>
-          <h1>Tan's PokéDex</h1>
+          <h1>Tan&apos;s PokéDex</h1>
           <img
             className={styles.logoImage}
             src="/images/pokedex.png"

@@ -15,13 +15,13 @@ export default function Home() {
           Shhhhh... This is a secret Next.js site where I keep all my captured
           Pokémon!
         </h3>
-        <div className={styles.imageContainer}>
+        <picture className={styles.imageContainer}>
           <img
             className={styles.pokeImage}
             src="/images/torchic.svg"
             alt="a pokemon torchic"
           />
-        </div>
+        </picture>
         <h3 className={styles.title}>So... What is a Pokédex?</h3>
         <p className={styles.text}>
           The Pokédex (ポケモン 図鑑 ずかん , Pokemon Zukan, Illustrated Pokémon{" "}
