@@ -3,8 +3,12 @@ import axios from "axios";
 import styles from "../../styles/components/Pokemon[name].module.scss";
 import { GET_POKEMON, GET_POKEMON_DESCRIPTION } from "../api/api";
 
-//-- fetching api data with getStaticPaths due to dynamic routing paths, to define a list of paths to
-//-- be statically generated before getStaticProps.
+//-- If a page has Dynamic Routes e.g. [id].js or [name].js, and uses getStaticProps, it needs to
+//-- define a list of paths to be statically generated.
+
+//-- When you export a function called getStaticPaths (Static Site Generation)
+//-- from a page that uses dynamic routes, Next.js will statically pre-render all
+//-- the paths specified by getStaticPaths.
 export const getStaticPaths = async () => {
   try {
     const { data } = await axios.get(`${GET_POKEMON}?offset=0&limit=9`);
@@ -19,7 +23,7 @@ export const getStaticPaths = async () => {
 
     return {
       paths,
-      fallback: false,
+      fallback: false, //-- means other routes should lead to the 404.js page.
     };
   } catch (error) {
     console.log("getStaticPaths error ->", error);
@@ -30,15 +34,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const name = context.params.name;
   try {
-    const response1 = await axios.get(`${GET_POKEMON}/${name}`);
-    const response2 = await axios.get(
+    const { data: pokemon } = await axios.get(`${GET_POKEMON}/${name}`);
+    const { data: characteristic } = await axios.get(
       `${GET_POKEMON_DESCRIPTION}/${response1.data.id}`
     );
 
+    //-- Passed to the page component as props
     return {
       props: {
-        pokemon: response1.data,
-        characteristic: response2.data,
+        pokemon,
+        characteristic,
       },
     };
   } catch (error) {

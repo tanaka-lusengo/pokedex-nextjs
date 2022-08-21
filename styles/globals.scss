@@ -45,24 +45,13 @@ a {
   box-sizing: border-box;
 }
 
-//-- navigation component styles
+//-- layout component
 .layout {
   max-width: 96rem;
   margin: 0 auto;
 }
 
-.footer {
-  @include flex(center, center);
-  padding: 2rem 0;
-  color: $secondary-text;
-  border-top: 1px solid $page-divide;
-
-  &__text {
-    margin-right: 0.5rem;
-  }
-}
-
-//-- 404 page component styles
+//-- 404 page component
 .not-found {
   text-align: center;
 

@@ -51,5 +51,10 @@
     border-radius: 4px;
     color: $button-text;
     text-align: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      scale: 1.1;
+    }
   }
 }

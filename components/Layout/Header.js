@@ -18,17 +18,17 @@ const Header = () => {
         <ul className={styles.list}>
           <Link href="/">
             <li className={styles.listItemContainer}>
-              <a>Home</a>
+              <a className={styles.link}>Home</a>
             </li>
           </Link>
           <Link href="/pokemon">
             <li className={styles.listItemContainer}>
-              <a>Pokemon</a>
+              <a className={styles.link}>Pokemon</a>
             </li>
           </Link>
           <Link href="/about">
             <li className={styles.listItemContainer}>
-              <a>About</a>
+              <a className={styles.link}>About</a>
             </li>
           </Link>
         </ul>
