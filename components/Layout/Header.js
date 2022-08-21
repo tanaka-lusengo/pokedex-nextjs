@@ -7,11 +7,13 @@ const Header = () => {
       <Link href="/">
         <div className={styles.logoContainer}>
           <h1>Tan&apos;s PokéDex</h1>
-          <img
-            className={styles.logoImage}
-            src="/images/pokedex.png"
-            alt="a red pokémon ball"
-          />
+          <picture>
+            <img
+              className={styles.logoImage}
+              src="/images/pokedex.png"
+              alt="a red pokémon ball"
+            />
+          </picture>
         </div>
       </Link>
       <nav>

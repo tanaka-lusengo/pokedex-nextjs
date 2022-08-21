@@ -34,16 +34,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const name = context.params.name;
   try {
-    const { data: pokemon } = await axios.get(`${GET_POKEMON}/${name}`);
-    const { data: characteristic } = await axios.get(
+    const response1 = await axios.get(`${GET_POKEMON}/${name}`);
+    const response2 = await axios.get(
       `${GET_POKEMON_DESCRIPTION}/${response1.data.id}`
     );
 
     //-- Passed to the page component as props
     return {
       props: {
-        pokemon,
-        characteristic,
+        pokemon: response1.data,
+        characteristic: response2.data,
       },
     };
   } catch (error) {
