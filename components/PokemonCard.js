@@ -8,7 +8,7 @@ const PokemonCard = ({ pokemon }) => {
         <h3 className={styles.name}>{pokemon.name}</h3>
         <img
           className={styles.pokeball}
-          src="/images/pokeball.SVG"
+          src="/images/pokeball.svg"
           alt="red pokeball"
         />
       </article>

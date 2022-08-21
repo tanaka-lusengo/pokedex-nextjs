@@ -1,3 +1,6 @@
+@use "../partials/mixins" as *;
+
+//-- custom animated keyframes
 @keyframes shaking {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -14,6 +17,11 @@
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+}
+
+.articleContainer {
+  @include flex(space-around, center);
+  padding: 2rem 0 5rem;
 }
 
 .pokeImage {
