@@ -25,11 +25,13 @@ const NotFound = () => {
       <div className="not-found">
         <h1>Oooops...</h1>
         <h2>This page cannot be found</h2>
-        <img
-          className="not-found__image"
-          src="/images/pikachu.svg"
-          alt="pokemon pikachu"
-        />
+        <picture>
+          <img
+            className="not-found__image"
+            src="/images/pikachu.svg"
+            alt="pokemon pikachu"
+          />
+        </picture>
         <p>
           Go back to{" "}
           <Link href="/">

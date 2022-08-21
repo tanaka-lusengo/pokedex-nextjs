@@ -10,11 +10,13 @@ const about = () => {
       </Head>
       <div className={styles.about}>
         <h1>About</h1>
-        <img
-          className={styles.pokeImage}
-          src="/images/squirtle.svg"
-          alt="pokemon squirtle"
-        />
+        <picture>
+          <img
+            className={styles.pokeImage}
+            src="/images/squirtle.svg"
+            alt="pokemon squirtle"
+          />
+        </picture>
         <p className={styles.text}>
           Pokémon is a Japanese media franchise managed by The Pokémon Company,
           a <br />
@@ -22,7 +24,7 @@ const about = () => {
           <br />
           was created by Satoshi Tajiri in 1996, and is centered on fictional{" "}
           <br />
-          creatures called "Pokémon".
+          creatures called &quotPokémon&quot.
         </p>
       </div>
     </>

@@ -57,13 +57,13 @@ const PokemonDetail = ({ pokemon, characteristic }) => {
       <article className={styles.articleContainer}>
         <div>
           <h2>{pokemon.name}</h2>
-          <div>
+          <picture>
             <img
               className={styles.pokeImage}
               src={pokemon.sprites.other.dream_world.front_default}
               alt="pokemon"
             />
-          </div>
+          </picture>
         </div>
 
         <div>

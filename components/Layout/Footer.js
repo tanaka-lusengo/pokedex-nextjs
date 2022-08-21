@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p className="footer__text"> Copyright 2022 Tanaka's PokéDex</p>
+      <p className="footer__text"> Copyright 2022 Tanaka&apos;s PokéDex</p>
       <img
         className="footer__img"
         src="/images/pokeball.svg"
