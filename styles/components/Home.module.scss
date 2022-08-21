@@ -1,5 +1,7 @@
 @use "../partials/variables" as *;
+@use "../partials/mixins" as *;
 
+//-- custom animated keyframes
 @keyframes shaking {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -20,25 +22,23 @@
 
 .main {
   .title {
-    color: #333;
-    padding: 2rem 0;
+    color: $primary-text;
     text-align: center;
+    padding: 2rem 0;
   }
 
   .text {
-    color: #777;
+    color: $secondary-text;
     text-align: center;
   }
 
   .imageContainer {
-    display: flex;
-    justify-content: center;
+    @include flex(center, none);
   }
 
   .pokeImage {
     margin: 2.5rem;
-    height: 15rem;
-    width: auto;
+    @include height-width(auto, 15rem);
     animation: shaking 3s infinite;
   }
 
@@ -47,9 +47,9 @@
     width: 15rem;
     padding: 0.8rem 0;
     margin: 5rem auto;
-    background: $primary-color;
+    background: $primary-button;
     border-radius: 4px;
-    color: white;
+    color: $button-text;
     text-align: center;
   }
 }

@@ -1,4 +1,5 @@
 @use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 //-- imported fonts
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
@@ -18,8 +19,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: #f2f2f2;
-  color: #333;
+  background: $background-color;
+  color: $primary-text;
 }
 
 ol,
@@ -34,7 +35,7 @@ a {
 }
 
 a {
-  color: #333;
+  color: $primary-text;
   cursor: pointer;
 }
 
@@ -51,12 +52,10 @@ a {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
   padding: 2rem 0;
-  color: #777;
-  border-top: 2px solid #eaeaea;
+  color: $secondary-text;
+  border-top: 1px solid $page-divide;
 
   &__text {
     margin-right: 0.5rem;
@@ -67,8 +66,14 @@ a {
 .not-found {
   text-align: center;
 
+  &__image {
+    margin: 2.5rem;
+    @include height-width(auto, 15rem);
+    animation: shaking 3s infinite;
+  }
+
   &__home-btn {
-    color: $primary-color;
+    color: $primary-button;
     text-decoration: underline;
   }
 }

@@ -1,3 +1,6 @@
+@use "../partials/mixins" as *;
+
+//-- custom animated keyframes
 @keyframes shaking {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -17,15 +20,11 @@
 }
 
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(center, center, column);
 
   .pokeImage {
     margin: 2.5rem 0;
-    width: auto;
-    height: 15rem;
+    @include height-width(15rem, auto);
     animation: shaking 3s infinite;
   }
 

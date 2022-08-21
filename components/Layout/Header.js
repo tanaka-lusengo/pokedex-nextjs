@@ -26,7 +26,7 @@ const Header = () => {
               <a>Pokemon</a>
             </li>
           </Link>
-          <Link href="about">
+          <Link href="/about">
             <li className={styles.listItemContainer}>
               <a>About</a>
             </li>

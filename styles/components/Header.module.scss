@@ -1,25 +1,23 @@
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+
 .header {
   margin: 1rem auto 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+  @include flex(space-between, center);
+  border-bottom: 1px solid $page-divide;
 
   .logoContainer {
-    display: flex;
-    align-items: center;
+    @include flex(none, center);
     cursor: pointer;
   }
 
   .logoImage {
     margin-left: 1rem;
-    height: auto;
-    width: 4.5rem;
+    @include height-width(4.5rem, auto);
   }
 
   .list {
-    display: flex;
-    align-items: center;
+    @include flex(none, center);
   }
 
   .listItemContainer {
